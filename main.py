@@ -1,4 +1,5 @@
 import random
+from Mancala import *
 
 
 def play_game_2_random_players(pits_per_player=6, stones_per_pit=4):
