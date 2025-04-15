@@ -188,6 +188,18 @@ class Mancala:
             return True
 
         return None
+    
+    def utility(self):
+        max_stones = self.board[self.p1_mancala_index]
+        min_stones = self.board[self.p2_mancala_index]
+        return max_stones - min_stones 
+
+    def get_valid_moves(self):
+        valid_moves = []
+        for pit in range(1, self.pits_per_player + 1):
+            if self.valid_move(pit):
+                valid_moves.append(pit)
+        return valid_moves
 
         # write your code here
         pass
